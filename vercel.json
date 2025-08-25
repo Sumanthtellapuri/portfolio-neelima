@@ -1,7 +1,0 @@
-{
-  "buildCommand": "npm ci && npm run build:vercel",
-  "outputDirectory": "dist",
-  "framework": "vite",
-  "installCommand": "npm ci --production=false",
-  "devCommand": "npm run dev"
-}
