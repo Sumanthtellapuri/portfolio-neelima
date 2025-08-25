@@ -9,13 +9,16 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "build:vercel": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "postinstall": "echo 'Dependencies installed successfully'"
   },
   "dependencies": {
     "@heroicons/react": "^2.2.0",
     "@tsparticles/react": "^3.0.0",
     "@tsparticles/slim": "^3.0.0",
+    "build": "^0.1.4",
     "chart.js": "^4.5.0",
     "framer-motion": "^12.23.12",
     "lucide-react": "^0.540.0",
