@@ -5,7 +5,8 @@ import react from "@vitejs/plugin-react";
 export default defineConfig({
   plugins: [react()],
   build: {
-    target: "es2020",
+    target: "es2015",
+    minify: "esbuild",
     rollupOptions: {
       output: {
         manualChunks: {
@@ -21,6 +22,10 @@ export default defineConfig({
     }
   },
   optimizeDeps: {
-    include: ["react", "react-dom", "chart.js", "react-chartjs-2"]
+    include: ["react", "react-dom", "chart.js", "react-chartjs-2"],
+    exclude: ["@rollup/rollup-linux-x64-gnu"]
+  },
+  esbuild: {
+    target: "es2015"
   }
 });

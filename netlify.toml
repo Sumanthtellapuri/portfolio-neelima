@@ -1,10 +1,12 @@
 [build]
-  command = "npm run build"
+  command = "npm ci --production=false && npm run build:netlify"
   publish = "dist"
 
 [build.environment]
   NODE_VERSION = "20.19.0"
   NPM_VERSION = "10.0.0"
+  NODE_OPTIONS = "--max-old-space-size=4096"
+  NPM_CONFIG_PRODUCTION = "false"
 
 # Handle SPA routing (React Router)
 [[redirects]]
