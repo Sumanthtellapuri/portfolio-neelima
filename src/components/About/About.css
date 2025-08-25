@@ -1,0 +1,146 @@
+/* Section base */
+.about-section {
+  position: relative;
+  padding: 6rem 1.5rem;
+  overflow: hidden;
+}
+
+.about-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: left;
+  margin-bottom: 3rem;
+  margin-left: 2%;
+  background: linear-gradient(to right, #3b82f6, #8b5cf6, #ec4899);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Container */
+.about-container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  background: linear-gradient(135deg, #f0f4f8 0%, #e6ebf5 50%, #f9fafc 100%);
+  background-attachment: fixed; /* subtle parallax effect */
+  position: relative;
+  overflow: hidden;
+  border-radius: 1.5rem;
+}
+
+/* Grid for Journey + Drives Me */
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+/* Card styling */
+.about-card {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 1.5rem;
+  padding: 2rem 2.5rem;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15), 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+}
+.about-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+}
+
+/* Subtitles */
+.about-subtitle {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #111827;
+}
+.about-subtitle.center {
+  justify-content: center;
+}
+
+/* Icons */
+.icon {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+/* Texts */
+.about-text {
+  font-size: 1rem;
+  color: #374151;
+  line-height: 1.6;
+}
+.about-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.about-list li {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  color: #374151;
+}
+
+/* Snapshot full width but centered */
+.snapshot {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+.snapshot-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+/* Mini cards inside snapshot */
+.about-mini-card {
+  background: white;
+  border-radius: 0.8rem;
+  padding: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.about-mini-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+.mini-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+.mini-title {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+.mini-text {
+  font-size: 0.9rem;
+  color: #4b5563;
+}
+
+/* Highlight spans */
+.highlight-blue {
+  color: #3b82f6;
+  font-weight: 600;
+}
+.highlight-purple {
+  color: #8b5cf6;
+  font-weight: 600;
+}
+.highlight-pink {
+  color: #ec4899;
+  font-weight: 600;
+}

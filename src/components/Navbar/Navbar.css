@@ -1,0 +1,95 @@
+:root {
+  --gradient: linear-gradient(90deg, #3b82f6, #a855f7, #ec4899);
+  --bg-dark: rgba(0, 0, 0, 0.8);
+  --text-light: #e5e7eb;
+  --text-white: #ffffff;
+  --hover-bg: rgba(255, 255, 255, 0.1);
+  --active-bg: rgba(255, 255, 255, 0.2);
+  --active-border: rgba(255, 255, 255, 0.2);
+  --transition: all 0.3s ease;
+}
+
+/* Navbar container */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(--bg-dark);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  z-index: 50;
+}
+
+.nav-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo */
+nav h1 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text; /* Firefox support */
+  color: #fff; /* fallback if gradient fails */
+}
+
+/* Links */
+nav ul {
+  display: flex;
+  gap: 0.5rem;
+  font-weight: 500;
+}
+
+nav ul li a {
+  padding: 0.4rem 0.75rem;
+  border-radius: 999px;
+  color: var(--text-light);
+  transition: var(--transition);
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  background: var(--hover-bg);
+  transform: scale(1.05);
+}
+
+nav ul li a.active {
+  background: var(--active-bg);
+  color: var(--text-white);
+  border: 1px solid var(--active-border);
+}
+
+/* Mobile button */
+.contact-btn {
+  display: none;
+  background: var(--gradient);
+  color: var(--text-white);
+  font-size: 0.875rem;
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  font-weight: 500;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  transition: var(--transition);
+}
+
+.contact-btn:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  nav ul {
+    display: none;
+  }
+  .contact-btn {
+    display: block;
+  }
+}
